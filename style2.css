@@ -1,0 +1,151 @@
+/* Style général du corps */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Style du titre principal */
+h1 {
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+/* Style du sous-titre */
+h2 {
+    color: #fff;
+    font-size: 2em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+}
+
+/* Style du titre de date */
+h3 {
+    color: #fff;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+    margin-bottom: 15px;
+}
+
+/* Style du paragraphe */
+p {
+    font-size: 1.2em;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Style du lien */
+a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #ef088f;
+    background: #1bc3ed;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.4s;
+    overflow: hidden;
+    font-size: 1.2em;
+}
+
+/* Animation de hover fun */
+a:hover {
+    color: #ff6b6b;
+    background: #fff;
+    border: 2px solid #ff6b6b;
+}
+
+a:before {
+    content: '';
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    top: 50%;
+    left: 50%;
+    background: rgba(255, 107, 107, 0.5);
+    transition: width 0.4s, height 0.4s, top 0.4s, left 0.4s;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+a:hover:before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+/* Conteneur pour centrer l'image */
+.diamond-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Image rognée en forme de losange */
+img {
+    width: 200px;
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zoom de l'image au hover */
+img:hover {
+    transform: scale(1.05);
+}
+
+/* Vidéo responsive */
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Taille plus petite pour la vidéo */
+.small-video {
+    max-width: 200px;  /* Largeur maximale définie à 300px */
+    width: 100%;  /* La vidéo occupera 100% de la largeur de son conteneur */
+    height: auto;  /* Conserve le ratio d'aspect de la vidéo */
+    margin: 20px auto;  /* Centrer la vidéo et ajouter un peu d'espace autour */
+}
+
+/* Réduire encore plus la taille de la vidéo sur les petits écrans */
+@media (max-width: 600px) {
+    .small-video {
+        max-width: 200px;  /* Réduit la taille maximale à 200px sur mobile */
+    }
+}
+
+/* Responsiveness pour mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    a {
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+
+    video {
+        margin: 20px 0;
+    }
+}
